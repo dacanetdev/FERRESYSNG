@@ -1,0 +1,170 @@
+<div class="container-fluid">
+    <h3>{{'Customers' | i18n}}</h3>
+
+    <form action class="smart-form form-inline">
+        <fieldset style="height: 95%;">
+            <div class="row">
+                <div class="col-md-10">
+                    <section class="col col-md-1 col-sm-3">
+                        <label class="label">{{'Customer' | i18n}} ID</label>
+                        <label class="input">
+                            <input type="text" class="input">
+                        </label>
+                    </section>
+                    <section class="col col-1">
+                        <label class="label">{{'Date Created' | i18n}}</label>
+                        <label class="input state-disabled">
+                            <input type="text" class="input" disabled="disabled">
+                        </label>
+                    </section>
+                    <section class="col col-3">
+                        <label class="label">{{'Customer Name' | i18n}}</label>
+                        <label class="input"> <i class="icon-append fa fa-search"></i>
+                            <input type="text" name="username" placeholder="{{'Search Customer' | i18n}}"/>
+                        </label>
+                    </section>
+                </div>
+                <div class="col-md-2">
+                    <img src="../../assets/img/nodisponible.png" class="img-thumbnail" style="width: 70% !important;">
+                    <div class="btn btn-default" style="width: 70% !important;" (click)="changeImage()">{{"Change Image" | i18n}} </div>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+    <div>
+        <sa-widget class="well">
+            <ul id="customerTabs" class="nav nav-tabs bordered">
+                <li [class.active]="selectedTab == 0">
+                    <a (click)="selectedTab = 0">{{"Generals" | i18n}}</a>
+                </li>
+                <li [class.active]="selectedTab == 1">
+                    <a (click)="selectedTab = 1">{{"Contact" | i18n}}</a>
+                </li>
+                <li [class.active]="selectedTab == 2">
+                    <a (click)="selectedTab = 2">{{"Sales Conditions" | i18n}}</a>
+                </li>
+                <li [class.active]="selectedTab == 3">
+                    <a (click)="selectedTab = 3">{{"Balances" | i18n}}</a>
+                </li>
+                <li [class.active]="selectedTab == 4">
+                    <a (click)="selectedTab = 4">{{"Historic" | i18n}}</a>
+                </li>
+                <li [class.active]="selectedTab == 5">
+                    <a (click)="selectedTab = 5">{{"Frequent Products" | i18n}}</a>
+                </li>
+                <li [class.active]="selectedTab == 6">
+                    <a (click)="selectedTab = 6">{{"Observations" | i18n}}</a>
+                </li>
+            </ul>
+            <tabset class="padding-10">
+                <tab [active]="selectedTab == 0" style="height:30em;overflow: auto;">
+                    <div>
+                        <form class="form-horizontal">
+                            <fieldset>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <div class="col-md-2 control-label">
+                                            <label>{{Key}}</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" placeholder="RFC">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-2 control-label">
+                                            <label>{{"Street" | i18n}}</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" placeholder="Calle">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-2 control-label">
+                                            <label>{{"Internal Number" | i18n}}</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" placeholder="Num. Interior">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-2 control-label">
+                                            <label>{{"Intersection" | i18n}}</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" placeholder="Entre Calles">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-2 control-label">
+                                            <label>{{"Email" | i18n}}</label>
+                                        </div>
+                                        <div class="col-md-10">
+                                            <input type="text" class="form-control" placeholder="Email">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <div class="col-md-2 control-label">
+                                            <label>CURP</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" placeholder="CURP">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-2 control-label">
+                                            <label>Num.Exterior</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" placeholder="Num. Exterior">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-2 control-label">
+                                            <label>Colonia</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" placeholder="Colonia">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-2 control-label">
+                                            <label>Código Postal</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" placeholder="Código Postal">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </fieldset>
+                        </form>
+                        <div class="col-md-6">
+
+                        </div>
+                    </div>
+                </tab>
+                <tab [active]="selectedTab == 1" style="height:30em;">
+                    <p>Tab 2</p>
+                </tab>
+                <tab [active]="selectedTab == 2" style="height:30em;">
+                    <p>Tab 3</p>
+                </tab>
+                <tab [active]="selectedTab == 3" style="height:30em;">
+                    <p>Tab 4</p>
+                </tab>
+                <tab [active]="selectedTab == 4" style="height:30em;">
+                    <p>Tab 5</p>
+                </tab>
+                <tab [active]="selectedTab == 5" style="height:30em;">
+                    <p>Tab 6</p>
+                </tab>
+                <tab [active]="selectedTab == 6" style="height:30em;">
+                    <p>Tab 7</p>
+                </tab>
+            </tabset>
+            <app-form-navigator></app-form-navigator>
+        </sa-widget>
+    </div>
+</div>

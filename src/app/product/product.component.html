@@ -1,0 +1,153 @@
+<div class="container-fluid">
+    <h3>{{'Products' | i18n}}</h3>
+
+    <form action class="smart-form form-inline">
+        <fieldset style="height: 95%;">
+            <div class="row">
+                <div class="col-md-10">
+                    <section class="col col-md-3 col-sm-3">
+                        <label class="label">{{'Product ' | i18n}} ID</label>
+                        <label class="input">
+                            <input type="text" class="input">
+                        </label>
+                    </section>
+                    <section class="col col-md-3">
+                        <label class="label">{{'User Created' | i18n}}</label>
+                        <label class="input state-disabled">
+                            <input type="text" class="input" disabled="disabled">
+                        </label>
+                    </section>
+                    <section class="col col-md-3">
+                        <label class="label">{{'Date Created' | i18n}}</label>
+                        <label class="input state-disabled">
+                            <input type="text" class="input" disabled="disabled">
+                        </label>
+                    </section>
+                    <section class="col col-md-12">
+                        <label class="label">{{'Description' | i18n}}</label>
+                        <label class="input">
+                            <input type="text" class="input" name="username" placeholder="{{'Description' | i18n}}"/>
+                        </label>
+                    </section>
+                    <section class="col col-md-3">
+                        <label class="label">{{'Supplier' | i18n}} ID</label>
+                        <label class="input"> <i class="icon-append fa fa-search"></i>
+                            <input type="text" name="username" placeholder="{{'Supplier' | i18n}} ID"/>
+                        </label>
+                    </section>
+                    <section class="col col-md-9">
+                        <label class="label">{{'Supplier' | i18n}}</label>
+                        <label class="input">
+                            <input type="text" class="input" name="username" placeholder="{{'Supplier' | i18n}}"/>
+                        </label>
+                    </section>
+                </div>
+                <div class="col-md-2">
+                    <img src="../../assets/img/nodisponible.png" class="img-thumbnail" style="width: 70% !important;">
+                    <div class="btn btn-default" style="width: 70% !important;" (click)="changeImage()">{{"Change Image"
+                        | i18n}}
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+    <div>
+        <sa-widget class="well">
+            <ul id="customerTabs" class="nav nav-tabs bordered">
+                <li [class.active]="selectedTab == 0">
+                    <a (click)="selectedTab = 0">{{"Data" | i18n}}</a>
+                </li>
+                <li [class.active]="selectedTab == 1">
+                    <a (click)="selectedTab = 1">{{"Costs" | i18n}}</a>
+                </li>
+                <li [class.active]="selectedTab == 2">
+                    <a (click)="selectedTab = 2">{{"Purchases" | i18n}}</a>
+                </li>
+                <li [class.active]="selectedTab == 3">
+                    <a (click)="selectedTab = 3">{{"Statistics" | i18n}}</a>
+                </li>
+            </ul>
+            <tabset class="padding-10">
+                <tab [active]="selectedTab == 0" style="height: 28em;overflow: auto;">
+                    <div>
+                        <form class="form-horizontal">
+                            <fieldset>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <div class="col-md-2 control-label">
+                                            <label>{{'Key' | i18n}}</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" placeholder="{{'Key' | i18n}}">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-md-2 control-label">
+                                            <label>{{'Unit' | i18n}}</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <select class="form-control"></select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-2 control-label">
+                                            <label>{{'Long Description' | i18n}}</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <textarea  class="form-control" rows="10"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <div class="col-md-2 control-label">
+                                            <label>{{'Family' | i18n}}</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <select class="form-control"></select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-2 control-label">
+                                            <label>{{'Cuenta con' | i18n}}</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div style="padding-left: 1em;">
+                                                <label class="checkbox col-md-2">
+                                                    <input type="checkbox" name="checkbox-inline">
+                                                    <i></i>{{"Sale"}}</label>
+                                                <label class="checkbox col-md-2">
+                                                    <input type="checkbox" name="checkbox-inline">
+                                                    <i></i>{{"Purchase"}}</label>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-2 control-label">
+                                            <label>{{'Observations' | i18n}}</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <textarea  class="form-control" rows="10"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                        <div class="col-md-6">
+
+                        </div>
+                    </div>
+                </tab>
+                <tab [active]="selectedTab == 1" style="height:28em;">
+                    <p>Tab 2</p>
+                </tab>
+                <tab [active]="selectedTab == 2" style="height:28em;">
+                    <p>Tab 3</p>
+                </tab>
+            </tabset>
+            <app-form-navigator></app-form-navigator>
+        </sa-widget>
+    </div>
+</div>

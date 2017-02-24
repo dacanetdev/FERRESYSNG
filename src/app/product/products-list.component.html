@@ -1,0 +1,38 @@
+<div class="row">
+  <article class="col-sm-12">
+    <sa-widget [editbutton]="false" color="darken">
+      <header><span class="widget-icon"> <i class="fa fa-table"></i> </span>
+        <h2>Lista de Productos</h2></header>
+      <div>
+        <div class="widget-body no-padding">
+          <sa-datatable
+                  [options]="{
+                ajax: {
+                  url:'http://localhost:23198/api/Product',
+                  dataSrc: ''
+                  },
+                colReorder: true,
+                select:'single',
+                scrollY: '45em',
+                lengthMenu: [ 15, 25, 50, 75, 100 ],
+                pageLength:15,
+              columns: [{data: 'ProductoId'}, {data: 'Clave'}, {data: 'Descripcion'}, {data: 'Familia'} ]}"
+                  paginationLength="true" tableClass="table table-striped table-bordered table-hover"
+                  width="100%" (onRowClick)="editProductos($event)">
+            <thead>
+            <tr>
+              <th data-hide="phone">Producto ID</th>
+              <th data-hide="phone">Clave
+              </th>
+              <th data-class="expand">Descripción
+              </th>
+              <th>Familia</th>
+            </tr>
+            </thead>
+          </sa-datatable>
+        </div>
+      </div>
+    </sa-widget>
+
+  </article>
+</div>

@@ -1,0 +1,111 @@
+<aside id="left-panel">
+
+    <!-- User info -->
+    <sa-login-info></sa-login-info>
+    <!-- end user info -->
+
+    <nav>
+        <!-- NOTE: Notice the gaps after each icon usage <i></i>..
+        Please note that these links work a bit different than
+        traditional href="" links. See documentation for details.
+        -->
+
+        <ul saSmartMenu>
+            <li routerLinkActive="active">
+                <a title="Point of Sale" routerLink="/pointofsale"><i class="fa fa-lg fa-fw fa-home"></i> <span
+                        class="menu-item-parent">{{'Point of Sale' | i18n}}</span></a>
+            </li>
+            <li routerLinkActive="active">
+                <a title="Customers" routerLink="/customer"><i class="fa fa-lg fa-fw fa-group"></i> <span
+                        class="menu-item-parent">{{'Customers' | i18n}}</span></a>
+            </li>
+            <li>
+                <a title="Products"><i class="fa fa-lg fa-fw fa-gears"></i> <span
+                        class="menu-item-parent">{{'Products' | i18n}}</span></a>
+                <ul>
+                    <li routerLinkActive="active">
+                        <a routerLink="/products/manager"><i class="fa fa-tasks"></i> {{'Products Manager' | i18n}}</a>
+                    </li>
+                    <li routerLinkActive="active">
+                        <a routerLink="/products/prices"><i class="fa fa-calculator"></i> {{'Change Prices' | i18n}}</a>
+                    </li>
+                </ul>
+            </li>
+            <li routerLinkActive="active">
+                <a title="Invoice Manager" routerLink="/invoices"><i class="fa fa-lg fa-fw fa-file-text-o"></i> <span
+                        class="menu-item-parent">{{'Invoice Manager' | i18n}}</span></a>
+            </li>
+            <li routerLinkActive="active">
+                <a title="Sales Document" routerLink="/sales/documents"><i class="fa fa-lg fa-fw fa-folder-o"></i> <span
+                        class="menu-item-parent">{{'Sales Documents' | i18n}}</span></a>
+            </li>
+            <li routerLinkActive="active">
+                <a title="Accountant" routerLink="/accountant"><i class="fa fa-lg fa-fw fa-archive"></i> <span
+                        class="menu-item-parent">{{'Accountant' | i18n}}</span></a>
+            </li>
+            <li>
+                <a title="Reports"><i class="fa fa-lg fa-fw fa-file-text-o"></i> <span
+                        class="menu-item-parent">{{'Reports' | i18n}}</span></a>
+                <ul>
+                    <li routerLinkActive="active">
+                        <a routerLink="/reports/dailysale"><i class="fa fa-bar-chart-o"></i> {{'Daily Sale' | i18n}}</a>
+                    </li>
+                    <li routerLinkActive="active">
+                        <a routerLink="/reports/inventory"><i class="fa fa-qrcode"></i> {{'Inventory' | i18n}}</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a title="Purchases and Expenses"><i class="fa fa-lg fa-fw fa-money"></i> <span
+                        class="menu-item-parent">{{'Purchases and Expenses' | i18n}}</span></a>
+                <ul>
+                    <li routerLinkActive="active">
+                        <a routerLink="/purchases"><i class="fa fa-shopping-cart"></i> {{'Purchases' | i18n}}</a>
+                    </li>
+                    <li routerLinkActive="active">
+                        <a routerLink="/expenses"><i class="fa fa-money"></i> {{'Expenses' | i18n}}</a>
+                    </li>
+                </ul>
+            </li>
+            <li routerLinkActive="active">
+                <a title="Suppliers" routerLink="/suppliers"><i class="fa fa-lg fa-fw fa-truck"></i> <span
+                        class="menu-item-parent">{{'Suppliers' | i18n}}</span></a>
+            </li>
+            <li>
+                <a title="Accounts"><i class="fa fa-lg fa-fw fa-money"></i> <span
+                        class="menu-item-parent">{{'Accounts' | i18n}}</span></a>
+                <ul>
+                    <li routerLinkActive="active">
+                        <a routerLink="/accounts/receivable"><i class="fa fa-credit-card"></i> {{'Accounts Receivable' | i18n}}</a>
+                    </li>
+                    <li routerLinkActive="active">
+                        <a routerLink="/accounts/payable"><i class="fa fa-shopping-bag"></i> {{'Accounts Payable' | i18n}}</a>
+                    </li>
+                </ul>
+            </li>
+            <li routerLinkActive="active">
+                <a title="Checks" routerLink="/checks"><i class="fa fa-lg fa-fw fa-envelope-o"></i> <span
+                        class="menu-item-parent">{{'Checks' | i18n}}</span></a>
+            </li>
+            <li routerLinkActive="active">
+                <a title="Stocks" routerLink="/stocks"><i class="fa fa-lg fa-fw fa-cubes"></i> <span
+                        class="menu-item-parent">{{'Stocks' | i18n}}</span></a>
+            </li>
+            <li routerLinkActive="active">
+                <a title="Quotations" routerLink="/quotations"><i class="fa fa-lg fa-fw fa-clone"></i> <span
+                        class="menu-item-parent">{{'Quotations' | i18n}}</span></a>
+            </li>
+            <li routerLinkActive="active">
+                <a title="Security" routerLink="/security"><i class="fa fa-lg fa-fw fa-key"></i> <span
+                        class="menu-item-parent">{{'Security' | i18n}}</span></a>
+            </li>
+            <li routerLinkActive="active">
+                <a title="Settings" routerLink="/settings"><i class="fa fa-lg fa-fw fa-gear"></i> <span
+                        class="menu-item-parent">{{'Settings' | i18n}}</span></a>
+            </li>
+        </ul>
+    </nav>
+
+    <sa-minify-menu></sa-minify-menu>
+
+</aside>

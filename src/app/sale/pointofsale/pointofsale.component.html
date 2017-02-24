@@ -1,0 +1,183 @@
+<div class="container-fluid">
+    <h3>{{'Point of Sale' | i18n}}</h3>
+
+    <accordion [closeOthers]="true">
+        <accordion-group [isOpen]="true" heading="{{'INIT SALE (CTRL + SHIFT + I)' | i18n}}">
+            <form action class="smart-form form-inline">
+                <fieldset style="height: 95%;">
+                    <div class="row">
+                        <section class="col col-md-1 col-sm-3">
+                            <label class="label"># {{'Item' | i18n}}</label>
+                            <label class="input state-disabled">
+                                <input type="text" class="input" disabled="disabled">
+                            </label>
+                        </section>
+                        <section class="col col-3">
+                            <label class="label">{{'Product' | i18n}}</label>
+                            <label class="input"> <i class="icon-append fa fa-search"></i>
+                                <input type="text" name="username" placeholder="{{'Search Product' | i18n}}"/>
+                            </label>
+                        </section>
+                        <section class="col col-2">
+                            <label class="label">{{'Key' | i18n}}</label>
+                            <label class="input">
+                                <input type="text" class="input">
+                            </label>
+                        </section>
+                        <section class="col col-1">
+                            <label class="label">{{'Quantity' | i18n}}</label>
+                            <label class="input">
+                                <input type="text" class="input">
+                            </label>
+                        </section>
+                        <section class="col col-1">
+                            <label class="label">{{'PL' | i18n}}</label>
+                            <label class="select">
+                                <select>
+                                </select>
+                                <i></i>
+                            </label>
+                        </section>
+                        <section class="col col-1">
+                            <label class="label">{{'Price' | i18n}}</label>
+                            <label class="input">
+                                <input type="text" class="input">
+                            </label>
+                        </section>
+                        <section class="col col-1">
+                            <label class="label">{{'Discount' | i18n}}</label>
+                            <label class="input">
+                                <input type="text" class="input">
+                            </label>
+                        </section>
+                        <section class="col col-1">
+                            <label class="label"></label>
+                            <label class="input">
+                                <br>
+                                <button class="btn btn-default btn-sm"><i class="fa fa-plus fa-fw"></i></button>
+                            </label>
+                        </section>
+                    </div>
+                </fieldset>
+            </form>
+            <div class="row">
+                <div class="col-md-9">
+                    <app-sale-items></app-sale-items>
+                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default" style="height: 22em;">
+                        <div class="panel-body">
+                            <h5>Observaciones</h5>
+                            <textarea class="form-control" rows="5"></textarea>
+                            <br>
+                            <h4>{{'Amount' | i18n}}:</h4>
+                            <label style="font-size: xx-large">{{'100000.00' | currency:'USD':true}}</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row pull-right">
+                <i class="fa fa-arrow-circle-o-right fa-5x"></i>
+            </div>
+        </accordion-group>
+        <accordion-group heading="{{'COMPLETE SALE (CTRL + SHIFT + F)' | i18n}}">
+            <h3>{{'Complete Sale' | i18n}}</h3>
+            <alert type="info">
+                <div class="row">
+                    <div class="col-md-6">{{'Sale Items' | i18n}}:</div>
+                    <div class="col-md-6">{{'Amount' | i18n}}:</div>
+                </div>
+            </alert>
+            <form action class="smart-form form-inline">
+                <fieldset style="height: 20em;">
+                    <div class="row">
+                        <section class="col col-1">
+                            <label class="label">{{'Document Type' | i18n}}</label>
+                            <label class="select">
+                                <select>
+                                </select>
+                                <i></i>
+                            </label>
+                        </section>
+                        <section class="col col-md-1">
+                            <label class="label">{{'Serie' | i18n}}</label>
+                            <label class="input state-disabled">
+                                <input type="text" class="input" disabled="disabled">
+                            </label>
+                        </section>
+                        <section class="col col-3">
+                            <label class="label">{{'Customer' | i18n}}</label>
+                            <label class="input"> <i class="icon-append fa fa-search"></i>
+                                <input type="text" name="username" placeholder="{{'Customer Search' | i18n}}"/>
+                            </label>
+                        </section>
+                        <section class="col col-1">
+                            <label class="label">{{'Payment Type' | i18n}}</label>
+                            <label class="select">
+                                <select>
+                                </select>
+                                <i></i>
+                            </label>
+                        </section>
+                        <section class="col col-2">
+                            <label class="label">{{'Exchange Type' | i18n}}</label>
+                            <label class="input">
+                                <input type="text" class="input">
+                            </label>
+                        </section>
+                        <section class="col col-2">
+                            <label class="label">{{'Account Number 4 Digits' | i18n}}</label>
+                            <label class="input">
+                                <input type="text" class="input">
+                            </label>
+                        </section>
+
+                    </div>
+                    <div class="row">
+                        <section class="col col-2">
+                            <label class="label">{{'Discount' | i18n}} 1</label>
+                            <label class="input">
+                                <input type="text" class="input">
+                            </label>
+                        </section>
+                        <section class="col col-2">
+                            <label class="label">{{'Discount' | i18n}} 2</label>
+                            <label class="input">
+                                <input type="text" class="input">
+                            </label>
+                        </section>
+                        <section class="col col-2">
+                            <label class="label">{{'Discount Reason' | i18n}}</label>
+                            <label class="input">
+                                <input type="text" class="input">
+                            </label>
+                        </section>
+                        <section class="col col-2">
+                            <label class="label">{{'Purchase Order' | i18n}}</label>
+                            <label class="input">
+                                <input type="text" class="input">
+                            </label>
+                        </section>
+                        <section class="col col-2">
+                            <label class="label">{{'Purchase Reference' | i18n}}</label>
+                            <label class="input">
+                                <input type="text" class="input">
+                            </label>
+                        </section>
+                        <section class="col col-2">
+                            <label class="label">{{"Clerk's Number" | i18n}}</label>
+                            <label class="input">
+                                <input type="text" class="input">
+                            </label>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6"><i class="fa fa-arrow-circle-o-left fa-5x pull-left"></i></div>
+                        <div class="col-md-6"> <i class="fa fa-arrow-circle-o-right fa-5x pull-right"></i></div>
+                    </div>
+                </fieldset>
+            </form>
+        </accordion-group>
+    </accordion>
+</div>
+
