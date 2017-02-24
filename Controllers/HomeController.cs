@@ -12,7 +12,7 @@ namespace FERRESYSNG.Controllers
         {
             ViewBag.Title = "Home Page";
 
-            return Redirect("/dist/index.html");
+            return Redirect("/index.html");
         }
     }
 }
